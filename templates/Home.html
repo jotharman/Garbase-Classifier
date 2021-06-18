@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ultimate Frisbee - Home</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+<body>
+	<header>
+		<h1>
+		<span style="background-color: #ffffff"> &nbsp; &nbsp;Garbage Classification &nbsp; &nbsp;</span>
+		</h1>
+		<!-- <h1>Garbage Classification</h1> -->
+		<nav>
+			<a href="{{ url_for('index', coverpic = coverpic)}}"class = "active">Home</a>
+			<a href="{{ url_for('waste_coll') }}">Waste Collection</a>
+			<a href="{{ url_for('contact_us') }}">Contact Us</a>
+		</nav>
+	</header>
+		<main>
+			<aside class = "left">
+			<a href="https://en.wikipedia.org/wiki/Recycling"><img src="https://eponline.com/-/media/ENV/eponline/Images/2007/11/recycling.jpg" alt="Recycling" style="width:92%"/> </a>
+			<p style="text-align: center; font-weight: bold;">Recycle</p>
+            <a href="https://en.wikipedia.org/wiki/Decomposition"><img src="https://cdn.thealternativedaily.com/wp-content/uploads/2015/03/rotting-apple-640x360.jpg" alt="Recycling" style="width:92%"/> </a>
+			<p style="text-align: center; font-weight: bold;">Decomposition</p>
+            <a href="https://en.wikipedia.org/wiki/Garbage"><img src="https://www.politico.eu/wp-content/uploads/2020/01/GettyImages-1154774107-1160x773.jpg" alt="Garbage" style="width:92%"/> </a>
+            <p style="text-align: center; font-weight: bold;">Trash</p>
+
+		</aside>
+			<section class = "right">
+				<h2>Watch your Head </h2>
+			<p>Garbage classification, which comes across as a social and unique cause where Image processing through Analytics can help with better management of garbage and waste materials. A standout amongst the most proficient approaches to process trash as indicated by its recyclability is to comprehend what class that waste has a place. Analytics can make this herculean task achievable through image classification into its proper categorizations. The goal of this task is to take pictures with single items, identify and group those pictures into three particular classifications of Recycle, Decomposition, and Trash. We will utilize a dataset of around 2000 pictures from every class indicated previously. This dataset was made accessible freely and the creators of the dataset give full access to it through their cloud services. The model utilized will be a “IBM Cloudant” because of its impressive and efficient capabilities in the world of machine learning, particularly in image classification. The obtained results show that automatic waste classification, using image processing and artificial intelligence methods, allows building effective systems that operate in the real world.</p>
+	</section>
+</main>
+</body>
+</html>

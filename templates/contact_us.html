@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ultimate Frisbee - Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+
+</head>
+
+<body>
+	<header>
+		<h1>
+            <span style="background-color: #ffffff"> &nbsp;  &nbsp;About Us  &nbsp;  &nbsp;</span>
+        </h1>
+		<nav>
+			<a href="{{ url_for('index') }}"class = "active">Home</a>
+      <a href="{{ url_for('waste_coll') }}">Waste Collection</a>
+      <a href="{{ url_for('contact_us') }}">Contact Us</a>
+		</nav>
+	</header>
+
+<main>
+    <!-- <div class="about-section">
+        <h1>Contact Us</h1>
+        <p>For any details contact us.</p>
+      </div> -->
+      <h2 style="text-align:center">Our Team</h2>
+      <h3 style="text-align:center"> We are open to collaborate with organizations.</h3>
+      <h3 style="text-align:center"> Kindly contact us.</h3>
+      <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                <img src= "{{url_for('static', filename='Ishita.jpg')}}" alt='Ishita' style= "width:30%">
+                <h3 style="font-size:25px;">Ishita Agarwal</h2>
+                <a href="ishitaagarwal071@gmai.com"><p> ishitaagarwal071@gmai.com </p></a>
+                <p> 7773000071 </p>
+                <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                <img src= "{{url_for('static', filename='harman.jpg')}}" alt='Ishita' style= "width:30%">
+                <h3 style="font-size:25px;">Harmanjot Kaur</h3>
+                <a href="f20180779@pilani.bits-pilani.ac.in"><p> f20180779@pilani.bits-pilani.ac.in </p></a>
+                <p> 7986155114 </p>
+                <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                <img src= "{{url_for('static', filename='Ayushi.jpg')}}" alt='Ishita' style= "width:30%">
+                <h3 style="font-size:25px;">Ayushi Agrawal</h3>
+                <a href="f20180443@pilani.bits-pilani.ac.in"><p> f20180443@pilani.bits-pilani.ac.in </p></a>
+                <p> 9717489105</p>
+                <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                <img src= "{{url_for('static', filename='Raunak.jpg')}}" alt='Ishita' style= "width:30%">
+                <h3 style="font-size:25px;">Raunak Sharma</h2>
+                <a href="raunaksharma678@gmail.com"><p> raunaksharma678@gmail.com </p></a>
+                <p> 6377289136</p>
+                <p style="text-align:right"><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+            
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                <img src= "{{url_for('static', filename='Vikram.jpg')}}" alt='Ishita' style= "width:30%">
+                <h3 style="font-size:25px;">Vikram Singh Chundawat</h2>
+                <a href="vikram2000b@gmail.com"><p> vikram2000b@gmail.com</p></a>
+                <p> 8003213447</p>
+                <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+</main>
+</body>
+</html>

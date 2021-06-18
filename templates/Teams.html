@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ultimate Frisbee - Teams</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+
+<body>
+	<header>
+		<h1>
+			<span style="background-color: #ffffff">  &nbsp;  &nbsp; Waste COllection  &nbsp; &nbsp;</span>
+		</h1>
+		<nav>
+			<a href="{{ url_for('index') }}"class = "active">Home</a>
+			<a href="{{ url_for('waste_coll') }}">Waste Collection</a>
+			<a href="{{ url_for('contact_us') }}">Contact Us</a>
+		</nav>
+	</header>
+	<main>
+		<aside class = "left">
+			<a href="https://en.wikipedia.org/wiki/Recycling"><img src="https://eponline.com/-/media/ENV/eponline/Images/2007/11/recycling.jpg" alt="Recycling" style="width:92%"/> </a>
+			<p style="text-align: center; font-weight: bold;">Recycle</p>
+            <a href="https://en.wikipedia.org/wiki/Decomposition"><img src="https://cdn.thealternativedaily.com/wp-content/uploads/2015/03/rotting-apple-640x360.jpg" alt="Recycling" style="width:92%"/> </a>
+			<p style="text-align: center; font-weight: bold;">Decomposition</p>
+            <a href="https://en.wikipedia.org/wiki/Garbage"><img src="https://www.politico.eu/wp-content/uploads/2020/01/GettyImages-1154774107-1160x773.jpg" alt="Garbage" style="width:92%"/> </a>
+            <p style="text-align: center; font-weight: bold;">Trash</p>
+
+		</aside>
+	</main>
+</body>
+
+
+<div class="container">
+
+	<form action="{{ url_for('data_entry')}}" method="post">
+	<h2> For waste masks </h2>
+    <p style="font-weight: bold;"> Enter the details here:</p>
+	<div class="row">
+		<label for="Name">Full Name &nbsp; &nbsp; &nbsp;&nbsp;</label>
+		<input type="text" placeholder="Enter Name" name="Name" required>
+	</div>
+
+	<div class="row">
+		<label for="Email">Email Address&nbsp;</label>
+		<input type="text" placeholder="Enter Email" name="email" required>
+	</div>
+
+	<div class="row">
+		<label for="number">Phone Number</label>
+		<input type="text" placeholder="Enter phone number" name="Phone number" required>
+	</div>
+	
+	<div class="row">
+		<button type="submit" class="btn" style="background-color: blanchedalmond;">submit</button>
+		<button type="submit" class="btn cancel" onclick="closeForm()" style="background-color: blanchedalmond;">cancel</button>
+	</div>
+    <p>For more info:</p>
+<p style="font-weight: bold;"> You can visit the website by clicking </p> <a href="https://www.binishdesai.com/">here</a>
+
+
+  </form>
+</div>
+
+<div class="container-sub">
+	<div class="submit">
+		<form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
+			<label for="file">Select image:</label>
+			<input type="file" id="file" name="file" accept="image/*" >
+			<input type="submit" style="background-color: blanchedalmond;">
+		</form>
+	</div>
+</div>
+
+
+</html>
