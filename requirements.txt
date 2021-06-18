@@ -1,3 +1,4 @@
+sudo update-alternatives  --set python /usr/bin/python3.8
 absl-py==0.13.0
 apturl==0.5.2
 asn1crypto==0.24.0
