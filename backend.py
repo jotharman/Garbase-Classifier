@@ -77,8 +77,8 @@ def predict():
 	model = keras.models.load_model(MODEL_ADDRESS)
 
 
-	MASK_MODEL_ADDRESS = "./VGG19-facemask"
-	mask_model = keras.models.load_model(MASK_MODEL_ADDRESS)
+	# MASK_MODEL_ADDRESS = "./VGG19-facemask"
+	# mask_model = keras.models.load_model(MASK_MODEL_ADDRESS)
 
 	file =  request.files['file']
 	filename = file.filename
@@ -88,35 +88,35 @@ def predict():
 
 
 	img = image.load_img(img_path, target_size=(224, 224, 3))
-	mask_img = image.load_img(img_path, target_size=(160, 160, 3))
+	# mask_img = image.load_img(img_path, target_size=(160, 160, 3))
 	print("\n\n\n\n\n\n\n\n\n\n\n\n {} \n\n\n\n\n\n\n\n\n\n\n\n", img)
 	img_array = image.img_to_array(img)
-	img_arr = image.img_to_array(mask_img)
+	# img_arr = image.img_to_array(mask_img)
 	img_array = img_array.reshape((1, 224, 224, 3))
-	img_arr = img_arr.reshape((1, 160, 160, 3))
+	# img_arr = img_arr.reshape((1, 160, 160, 3))
 	print("IMG_SHAPE", img_array.shape)
-	mask_result = np.argmax(mask_model.predict(img_arr)) 
-	if str(mask_result) == '0':
-		result = np.argmax(model.predict(img_array))
-		if str(result) == '1':
-			return "The uploaded is that of cardboard"
-			# return "The given image is that of mask, you can fill the details in the side box for selling the waste masks!"
-		elif str(result) == '2':
-			return "The uploaded is that of Glass"
-		elif str(result) == '3':
-			return "The uploaded is that of Metal"
-		elif str(result) == '4':
-			return "The uploaded is that of Paper"
-		elif str(result) == '5':
-			# return "The uploaded is that of Plastic"
-			return "The given image is that of mask, you can fill the details in the side box for selling the waste masks!"
-		elif str(result) == '6':
-			return "The uploaded is that of Trash"
+	# mask_result = np.argmax(mask_model.predict(img_arr)) 
+	# if str(mask_result) == '0':
+	# 	result = np.argmax(model.predict(img_array))
+	if str(result) == '1':
+		return "The uploaded is that of cardboard"
+		# return "The given image is that of mask, you can fill the details in the side box for selling the waste masks!"
+	elif str(result) == '2':
+		return "The uploaded is that of Glass"
+	elif str(result) == '3':
+		return "The uploaded is that of Metal"
+	elif str(result) == '4':
+		return "The uploaded is that of Paper"
+	elif str(result) == '5':
+		# return "The uploaded is that of Plastic"
+		return "The given image is that of mask, you can fill the details in the side box for selling the waste masks!"
+	elif str(result) == '6':
+		return "The uploaded is that of Trash"
 		# elif str(result) == '6':
 		# 	return "The uploaded is that of cardboard"
 
-	elif str(mask_result) == '1':
-		return "The given image is that of mask, you can fill the details in the side box for selling the waste masks!"
+	# elif str(mask_result) == '1':
+	# 	return "The given image is that of mask, you can fill the details in the side box for selling the waste masks!"
 
 
     
@@ -124,6 +124,4 @@ def predict():
 
 if __name__ == "__main__":
    app.run(debug=True)
-
-
 
