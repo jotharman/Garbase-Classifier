@@ -12,5 +12,6 @@ We developed the model for garbage classification. The dataset for garbage class
 Further, we used a machine learning model to identify masks in garbage. We used the VGG19 model which is a CNN (Convolution Neural Network) to classify images. The model shows a very low loss and high accuracy.
 To connect all this and take this to household level, we are using a webapp through which a user can browse the image and classify the waste onto 6 levels.
  
+ 3-min Video link: https://drive.google.com/file/d/1D7qTJnQU0IQCIEs2PCTjGJcDcIq_9dZJ/view?usp=sharing
 
 
