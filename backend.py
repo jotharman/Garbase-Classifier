@@ -97,7 +97,7 @@ def predict():
 	print("IMG_SHAPE", img_array.shape)
 	# mask_result = np.argmax(mask_model.predict(img_arr)) 
 	# if str(mask_result) == '0':
-	# 	result = np.argmax(model.predict(img_array))
+	result = np.argmax(model.predict(img_array))
 	if str(result) == '1':
 		return "The uploaded is that of cardboard"
 		# return "The given image is that of mask, you can fill the details in the side box for selling the waste masks!"
